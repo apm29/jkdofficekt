@@ -1,0 +1,255 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFF4"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_222222"
+                android:padding="6dp"
+                android:text="家庭照片"
+                android:textColor="@color/white" />
+
+            <ScrollView
+                android:fillViewport="true"
+                android:layout_width="match_parent"
+                android:minHeight="140dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/hint_home_1"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:drawableTop="@android:drawable/ic_menu_add"
+                            android:text="点击添加照片"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView android:scaleType="fitXY"
+                            android:id="@+id/iv_home_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                        <com.dingzhu.junkd.mvp.ui.widget.ProgressBarWithText
+                            android:visibility="gone"
+                            android:id="@+id/progress_bar_home_1"
+                            android:layout_below="@id/hint_home_1"
+                            app:progressInt="0"
+                            app:progressMainColor="#3db922"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/hint_home_2"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:drawableTop="@android:drawable/ic_menu_add"
+                            android:text="点击添加照片"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:id="@+id/iv_home_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                        <com.dingzhu.junkd.mvp.ui.widget.ProgressBarWithText
+                            app:progressMainColor="#3db922"
+                            android:visibility="gone"
+                            android:id="@+id/progress_bar_home_2"
+                            android:layout_below="@id/hint_home_2"
+                            app:progressInt="0"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/hint_home_3"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:drawableTop="@android:drawable/ic_menu_add"
+                            android:text="点击添加照片"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView android:scaleType="fitXY"
+                            android:id="@+id/iv_home_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                        <com.dingzhu.junkd.mvp.ui.widget.ProgressBarWithText
+                            app:progressMainColor="#3db922"
+                            android:visibility="gone"
+                            android:id="@+id/progress_bar_home_3"
+                            android:layout_below="@id/hint_home_3"
+                            app:progressInt="0"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_222222"
+                android:padding="6dp"
+                android:text="公司照片"
+                android:textColor="@color/white" />
+
+            <ScrollView
+                android:fillViewport="true"
+                android:layout_width="match_parent"
+                android:minHeight="140dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/hint_company_1"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:drawableTop="@android:drawable/ic_menu_add"
+                            android:text="点击添加照片"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageView android:scaleType="fitXY"
+                            android:id="@+id/iv_company_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                        <com.dingzhu.junkd.mvp.ui.widget.ProgressBarWithText
+                            app:progressMainColor="#3db922"
+                            android:visibility="gone"
+                            android:id="@+id/progress_bar_company_1"
+                            android:layout_below="@id/hint_company_1"
+                            app:progressInt="0"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/hint_company_2"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:drawableTop="@android:drawable/ic_menu_add"
+                            android:text="点击添加照片"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageView android:scaleType="fitXY"
+                            android:id="@+id/iv_company_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                        <com.dingzhu.junkd.mvp.ui.widget.ProgressBarWithText
+                            app:progressMainColor="#3db922"
+                            android:visibility="gone"
+                            android:id="@+id/progress_bar_company_2"
+                            android:layout_below="@id/hint_company_2"
+                            app:progressInt="0"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/hint_company_3"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:drawableTop="@android:drawable/ic_menu_add"
+                            android:text="点击添加照片"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView android:scaleType="fitXY"
+                            android:id="@+id/iv_company_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                        <com.dingzhu.junkd.mvp.ui.widget.ProgressBarWithText
+                            app:progressMainColor="#3db922"
+                            android:visibility="gone"
+                            android:id="@+id/progress_bar_company_3"
+                            android:layout_below="@id/hint_company_3"
+                            app:progressInt="0"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                android:layout_marginTop="12dp"
+                android:id="@+id/tv_loan_pic_info_save"
+                style="@style/XTextViewBtn"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:text="保存" />
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                android:gravity="center"
+                android:text="@string/hint_for_picture_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

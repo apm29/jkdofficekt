@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressBarWithText">
+        <attr name="progressTextSize" format="dimension" />
+        <attr name="progressTextColor" format="color" />
+        <attr name="progressMainColor" format="color" />
+        <attr name="progressSecondaryColor" format="color" />
+        <attr name="progressInt" format="integer" />
+        <attr name="withText" format="boolean" />
+    </declare-styleable>
+</resources>

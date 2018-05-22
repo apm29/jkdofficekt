@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+        <variable
+            name="bean"
+            type="com.shirly.apm29.jkdofficekt.model.bean.Application"/>
+    </data>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EFEFF4"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_name"
+                style="@style/Edit">
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_width="wrap_content"
+                    android:text="*"
+                    android:textColor="@color/junkd_red_dark" />
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_marginLeft="0dp"
+                    android:text="姓名" />
+
+                <EditText
+                    android:id="@+id/tv_name"
+                    style="@style/EditContent"
+                    android:text="@={bean.profile.real_name}"
+                    android:hint="请输入姓名" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_id"
+                style="@style/Edit">
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_width="wrap_content"
+                    android:text="*"
+                    android:textColor="@color/junkd_red_dark" />
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_marginLeft="0dp"
+                   android:text="身份证" />
+
+                <EditText
+                    android:id="@+id/tv_id"
+                    style="@style/EditContent"
+                    android:digits="1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+                    android:maxLength="18"
+                    android:text="@={bean.profile.id_card_no}"
+                    android:hint="请输入身份证" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_gender"
+                style="@style/Edit">
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_width="wrap_content"
+                    android:text="*"
+                    android:textColor="@color/junkd_red_dark" />
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_marginLeft="0dp"
+                    android:text="性别" />
+
+                <TextView
+                    android:id="@+id/tv_gender"
+                    style="@style/EditContent.Optional"
+                    android:text="@={bean.profile.genderString}"
+                    android:hint="请输入性别" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_marital"
+                style="@style/Edit">
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_width="wrap_content"
+                    android:text="*"
+                    android:textColor="@color/junkd_red_dark" />
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_marginLeft="0dp"
+                    android:text="婚姻状况" />
+
+                <TextView
+                    android:id="@+id/tv_marital"
+                    style="@style/EditContent.Optional"
+                    android:text="@={bean.profile.maritalString}"
+                    android:hint="请输入婚姻状况" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_spouse_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_spouse_name"
+                    style="@style/Edit">
+
+                    <TextView
+                        style="@style/EditTitle"
+                        android:layout_width="wrap_content"
+                        android:text="*"
+                        android:textColor="@color/junkd_red_dark" />
+
+                    <TextView
+                        style="@style/EditTitle"
+                        android:layout_marginLeft="0dp"
+                        android:text="配偶姓名" />
+
+                    <EditText
+                        android:id="@+id/tv_spouse_name"
+                        style="@style/EditContent"
+                        android:text="@={bean.profile.coupleRealName}"
+                        android:hint="请输入配偶姓名"
+                        android:maxLength="18" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_spouse_id"
+                    style="@style/Edit">
+
+                    <TextView
+                        style="@style/EditTitle"
+                        android:layout_width="wrap_content"
+                        android:text="*"
+                        android:textColor="@color/junkd_red_dark" />
+
+                    <TextView
+                        style="@style/EditTitle"
+                        android:layout_marginLeft="0dp"
+                        android:text="配偶身份证" />
+
+                    <EditText
+                        android:id="@+id/tv_spouse_id"
+                        style="@style/EditContent"
+                        android:text="@={bean.profile.couple_id_card_no}"
+                        android:hint="请输入配偶身份证" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_work_company"
+                style="@style/Edit">
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_width="wrap_content"
+                    android:text="*"
+                    android:textColor="@color/junkd_red_dark" />
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_marginLeft="0dp"
+                    android:text="工作单位(全称)" />
+
+                <EditText
+                    android:id="@+id/tv_work_company"
+                    style="@style/EditContent"
+                    android:text="@={bean.job.company_name}"
+                    android:hint="例如:浙江万科科技有限公司" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_work_department"
+                style="@style/Edit">
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_width="wrap_content"
+                    android:text="*"
+                    android:textColor="@color/junkd_red_dark" />
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_marginLeft="0dp"
+                    android:text="所在部门" />
+
+                <EditText
+                    android:id="@+id/tv_work_department"
+                    style="@style/EditContent"
+                    android:text="@={bean.job.department}"
+                    android:hint="本人所在部门 例如:运营部" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_rank"
+                style="@style/Edit">
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_width="wrap_content"
+                    android:text="*"
+                    android:textColor="@color/junkd_red_dark" />
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_marginLeft="0dp"
+                    android:text="职务" />
+
+                <EditText
+                    android:id="@+id/tv_rank"
+                    style="@style/EditContent"
+                    android:text="@={bean.job.position_level}"
+                    android:hint="本人担任岗位 例如:公关经理,工程师" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_company_nature"
+                style="@style/Edit">
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_width="wrap_content"
+                    android:text="*"
+                    android:textColor="@color/junkd_red_dark" />
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_marginLeft="0dp"
+                    android:text="编制" />
+
+                <TextView
+                    android:id="@+id/tv_company_nature"
+                    style="@style/EditContent.Optional"
+                    android:text="@={bean.job.staffingString}"
+                    android:hint="请选择编制" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_income"
+                style="@style/Edit">
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_width="wrap_content"
+                    android:text="*"
+                    android:textColor="@color/junkd_red_dark" />
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_marginLeft="0dp"
+                    android:text="年收入" />
+
+                <EditText
+                    android:id="@+id/tv_income"
+                    style="@style/EditContent"
+                    android:hint="请输入年收入"
+                    android:text="@={bean.profile.year_income}"
+                    android:inputType="number" />
+
+                <TextView
+                    style="@style/EditSpace"
+                    android:text="元" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_acc_found"
+                style="@style/Edit">
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_width="wrap_content"
+                    android:text="*"
+                    android:textColor="@color/junkd_red_dark" />
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_marginLeft="0dp"
+                    android:text="公积金个人月缴金额" />
+
+                <EditText
+                    android:id="@+id/tv_acc_found"
+                    style="@style/EditContent"
+                    android:hint="请输入公积金"
+                    android:text="@={bean.profile.foundation_month_amount}"
+                    android:inputType="number" />
+
+                <TextView
+                    style="@style/EditSpace"
+                    android:text="元" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_repayment_way"
+                style="@style/Edit">
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_width="wrap_content"
+                    android:text="*"
+                    android:textColor="@color/junkd_red_dark" />
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_marginLeft="0dp"
+                    android:text="还款方式" />
+
+                <TextView
+                    android:id="@+id/tv_repayment_way"
+                    style="@style/EditContent.Optional"
+                    android:text="@={bean.profile.repaymentTypeString}"
+                    android:hint="请选择还款方式" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_term"
+                style="@style/Edit">
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_width="wrap_content"
+                    android:text="*"
+                    android:textColor="@color/junkd_red_dark" />
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_marginLeft="0dp"
+                    android:text="期限" />
+
+                <EditText
+                    android:id="@+id/tv_term"
+                    style="@style/EditContent"
+                    android:hint="您的借款期限,例如6"
+                    android:text="@={bean.profile.term}"
+                    android:inputType="number" />
+
+                <TextView
+                    style="@style/EditSpace"
+                    android:text="月" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_credit_account"
+                style="@style/Edit">
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_width="wrap_content"
+                    android:text="*"
+                    android:textColor="@color/junkd_red_dark" />
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_marginLeft="0dp"
+                    android:text="征信账号" />
+
+                <EditText
+                    android:id="@+id/tv_credit_account"
+                    style="@style/EditContent"
+                    android:text="@={bean.profile.credit_account}"
+                    android:hint="请输入征信账号" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_credit_password"
+                style="@style/Edit">
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_width="wrap_content"
+                    android:text="*"
+                    android:textColor="@color/junkd_red_dark" />
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_marginLeft="0dp"
+                    android:text="征信密码" />
+
+                <EditText
+                    android:id="@+id/tv_credit_password"
+                    style="@style/EditContent"
+                    android:text="@={bean.profile.credit_account_password}"
+                    android:hint="请输入征信密码" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_credit_verify_code"
+                style="@style/Edit">
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_width="wrap_content"
+                    android:text="*"
+                    android:textColor="@color/junkd_red_dark" />
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_marginLeft="0dp"
+                    android:text="征信验证码" />
+
+                <EditText
+                    android:id="@+id/tv_credit_verify_code"
+                    style="@style/EditContent"
+                    android:text="@={bean.profile.credit_account_code}"
+                    android:hint="请输入征信验证码"
+                    android:maxLength="6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_acc_account"
+                style="@style/Edit">
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_width="wrap_content"
+                    android:text="*"
+                    android:textColor="@color/junkd_red_dark" />
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_marginLeft="0dp"
+                    android:text="公积金账号" />
+
+                <EditText
+                    android:id="@+id/tv_acc_account"
+                    style="@style/EditContent"
+                    android:text="@={bean.profile.foundation_account}"
+                    android:hint="请输入公积金账号" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_acc_password"
+                style="@style/Edit">
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_width="wrap_content"
+                    android:text="*"
+                    android:textColor="@color/junkd_red_dark" />
+
+                <TextView
+                    style="@style/EditTitle"
+                    android:layout_marginLeft="0dp"
+                    android:text="公积金密码" />
+
+                <EditText
+                    android:id="@+id/tv_acc_password"
+                    style="@style/EditContent"
+                    android:text="@={bean.profile.foundation_account_password}"
+                    android:hint="请输入公积金密码" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_loan_personal_info_save"
+                style="@style/XTextViewBtn"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:text="保存"
+                android:textColor="@color/jun_btn_text_color_selector" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</layout>

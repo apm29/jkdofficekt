@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        style="@style/TextViewNotice"
+        android:text="我的家庭房屋照片"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_margin_40dp" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        style="@style/TextViewNotice"
+        android:text="我的工作单位照片"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_margin_40dp" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

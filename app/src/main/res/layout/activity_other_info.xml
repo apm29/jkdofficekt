@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/ll_credit_account"
+        style="@style/Edit">
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_width="wrap_content"
+            android:textColor="@color/junkd_red_dark"
+            android:text="*" />
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_marginLeft="0dp"
+            android:text="征信账号" />
+
+        <com.dingzhu.junkd.mvp.ui.widget.XEditText
+            android:id="@+id/tv_credit_account"
+            android:hint="请输入征信账号"
+            style="@style/EditContent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_credit_password"
+        style="@style/Edit">
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_width="wrap_content"
+            android:textColor="@color/junkd_red_dark"
+            android:text="*" />
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_marginLeft="0dp"
+            android:text="征信密码" />
+
+        <com.dingzhu.junkd.mvp.ui.widget.XEditText
+            android:id="@+id/tv_credit_password"
+            android:inputType="textPassword"
+            android:hint="请输入征信密码"
+            style="@style/EditContent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_credit_verify_code"
+        style="@style/Edit">
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_width="wrap_content"
+            android:textColor="@color/junkd_red_dark"
+            android:text="*" />
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_marginLeft="0dp"
+            android:text="征信验证码" />
+
+        <com.dingzhu.junkd.mvp.ui.widget.XEditText
+            android:id="@+id/tv_credit_verify_code"
+            android:hint="请输入征信验证码"
+            style="@style/EditContent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_acc_account"
+        style="@style/Edit">
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_width="wrap_content"
+            android:textColor="@color/junkd_red_dark"
+            android:text="*" />
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_marginLeft="0dp"
+            android:text="公积金账号" />
+
+        <com.dingzhu.junkd.mvp.ui.widget.XEditText
+            android:id="@+id/tv_acc_account"
+            android:hint="请输入公积金账号"
+            style="@style/EditContent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_acc_password"
+        style="@style/Edit">
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_width="wrap_content"
+            android:textColor="@color/junkd_red_dark"
+            android:text="*" />
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_marginLeft="0dp"
+            android:text="公积金密码" />
+
+        <com.dingzhu.junkd.mvp.ui.widget.XEditText
+            android:id="@+id/tv_acc_password"
+            android:inputType="textPassword"
+            android:hint="请输入公积金密码"
+            style="@style/EditContent"/>
+    </LinearLayout>
+
+    <com.dingzhu.junkd.mvp.ui.widget.XTextView
+        android:id="@+id/tv_loan_personal_info_save"
+        style="@style/XTextViewBtn"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:textColor="@color/jun_btn_text_color_selector"
+        android:text="保存" />
+</LinearLayout>

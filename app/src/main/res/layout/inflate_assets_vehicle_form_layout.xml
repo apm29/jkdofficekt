@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            type="com.shirly.apm29.jkdofficekt.model.bean.Vehicle"
+            name="bean"
+            />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_marginLeft="0dp"
+            style="@style/TextViewNotice"
+            android:textColor="@color/tabPress"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:drawableRight="@android:drawable/ic_menu_close_clear_cancel"
+            android:text="车辆信息" />
+        <LinearLayout style="@style/Edit" android:visibility="gone">
+
+            <TextView
+                style="@style/EditTitle"
+                android:text="*购置价格" />
+
+            <EditText
+                android:id="@+id/et_loan_asset_car_price"
+                style="@style/EditContent"
+                android:hint="请输入购买价格"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                style="@style/EditSpace"
+                android:text="万元" />
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout style="@style/Edit">
+            <TextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:textColor="@color/junkd_red_dark"
+                android:text="*" />
+            <TextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="车辆品牌" />
+
+            <EditText
+                android:text="@={bean.brand}"
+                android:id="@+id/et_loan_asset_car_model"
+                style="@style/EditContent"
+                android:hint="请输入车辆品牌" />
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+        <LinearLayout style="@style/Edit">
+            <TextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:textColor="@color/junkd_red_dark"
+                android:text="*" />
+            <TextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="车辆颜色" />
+
+            <EditText
+                android:text="@={bean.colour}"
+                android:id="@+id/et_loan_asset_car_color"
+                style="@style/EditContent"
+                android:hint="请输入车辆颜色" />
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout style="@style/Edit">
+            <TextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:textColor="@color/junkd_red_dark"
+                android:text="*" />
+            <TextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="车牌号码" />
+
+            <EditText
+                android:text="@={bean.license}"
+                android:id="@+id/et_loan_asset_car_license_number"
+                style="@style/EditContent"
+                android:hint="请输入车牌号" />
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout
+            android:id="@+id/ll_loan_asset_car_buy_time"
+            style="@style/Edit" android:visibility="gone">
+
+            <TextView
+                style="@style/EditTitle"
+                android:text="*购买时间" />
+
+            <TextView
+                android:id="@+id/tv_loan_asset_car_buy_time"
+                style="@style/EditContent.Optional"
+                android:hint="请选择购买时间" />
+
+            <TextView style="@style/EditSpace" />
+        </LinearLayout>
+
+        <View style="@style/Divider" android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/ll_loan_asset_car_is_pass_annual_inspection"
+            style="@style/Edit" android:visibility="gone">
+
+            <TextView
+                style="@style/EditTitle"
+                android:text="*车辆是否通过年检" />
+
+            <TextView
+                android:id="@+id/tv_loan_asset_car_is_pass_annual_inspection"
+                style="@style/EditContent.Optional"
+                android:hint="请选择" />
+
+            <TextView style="@style/EditSpace" />
+        </LinearLayout>
+
+        <View style="@style/Divider" android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/ll_loan_asset_car_is_in_use"
+            style="@style/Edit" android:visibility="gone">
+
+            <TextView
+                style="@style/EditTitle"
+                android:text="*车辆是否运营" />
+
+            <TextView
+                android:id="@+id/tv_loan_asset_car_is_in_use"
+                style="@style/EditContent.Optional"
+                android:hint="请选择" />
+
+            <TextView style="@style/EditSpace" />
+        </LinearLayout>
+
+        <View style="@style/Divider" android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/ll_loan_asset_car_insurance"
+            style="@style/Edit" android:visibility="gone">
+
+            <TextView
+                style="@style/EditTitle"
+                android:text="*车辆已购保险" />
+
+            <!--<TextView
+                android:id="@+id/tv_loan_asset_car_insurance"
+                style="@style/EditContent.Optional"
+                android:hint="请选择" />
+
+            <TextView style="@style/EditSpace" />-->
+            <CheckBox
+                android:id="@+id/checkbox_transport_force_insurance"
+                android:text="交强险"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:id="@+id/checkbox_commercial_insurance"
+                android:text="交强险"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <View style="@style/Divider" android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/loan_asset_car_forced_insurance_expire_date"
+            style="@style/Edit" android:visibility="gone">
+
+            <TextView
+                style="@style/EditTitle"
+                android:text="*交强险截止日期" />
+
+            <TextView
+                android:id="@+id/et_loan_asset_car_forced_insurance_expire_date"
+                style="@style/EditContent.Optional"
+                android:hint="请输入交强险截止日期" />
+        </LinearLayout>
+
+        <View style="@style/Divider" android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/loan_asset_car_commercial_insurance_expire_date"
+            style="@style/Edit" android:visibility="gone">
+
+            <TextView
+                style="@style/EditTitle"
+                android:text="*商业险截止日期" />
+
+            <TextView
+                android:id="@+id/et_loan_asset_car_commercial_insurance_expire_date"
+                style="@style/EditContent.Optional"
+                android:hint="请输入商业险截止日期" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--申请人信息-->
+    <LinearLayout
+        android:id="@+id/ll_personal_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_click_white">
+
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/Item.Setting"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableRight="@null"
+            android:text="申请人信息"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            android:id="@+id/tv_personal_info_apply_status"
+            style="@style/Item.Setting.Hint"
+            android:layout_width="wrap_content"
+            android:background="@null"
+            android:drawableRight="@mipmap/arrow_in"
+            android:text="未填写"
+            android:textSize="@dimen/text_size_12sp" />
+    </LinearLayout>
+
+    <View
+        style="@style/Divider"
+        android:layout_marginLeft="@dimen/layout_margin_20dp" />
+
+
+    <!--家庭财产-->
+    <LinearLayout
+        android:id="@+id/ll_asset_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_click_white">
+
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/Item.Setting"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableRight="@null"
+            android:text="家庭财产"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            android:id="@+id/tv_asset_info_apply_status"
+            style="@style/Item.Setting.Hint"
+            android:layout_width="wrap_content"
+            android:background="@null"
+            android:drawableRight="@mipmap/arrow_in"
+            android:text="未填写"
+            android:textSize="@dimen/text_size_12sp" />
+    </LinearLayout>
+
+    <View
+        style="@style/Divider"
+        android:layout_marginLeft="@dimen/layout_margin_20dp" />
+    <!--其他信息-->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_other_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_click_white">
+
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/Item.Setting"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableRight="@null"
+            android:text="其他信息"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            android:id="@+id/tv_job_info_apply_status"
+            style="@style/Item.Setting.Hint"
+            android:layout_width="wrap_content"
+            android:background="@null"
+            android:drawableRight="@mipmap/arrow_in"
+            android:text="未填写"
+            android:textSize="@dimen/text_size_12sp" />
+    </LinearLayout>
+
+    <View
+        style="@style/Divider"
+        android:layout_marginLeft="@dimen/layout_margin_20dp" />
+
+
+
+    <com.dingzhu.junkd.mvp.ui.widget.XTextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/layout_margin_20dp"
+        android:paddingRight="@dimen/layout_margin_20dp"
+        android:text="@string/apply_info_form_notice"
+        android:textColor="@color/text_hint"
+        android:textSize="@dimen/text_size_12sp" />
+    <android.support.v4.widget.Space
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
+    <com.dingzhu.junkd.mvp.ui.widget.XTextView
+    android:id="@+id/tv_loan_apply_info_commit"
+        android:layout_marginLeft="65dp"
+        android:layout_marginRight="65dp"
+    style="@style/XTextViewBtn"
+    android:text="提交" />
+    <android.support.v4.widget.Space
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/banner_static" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/no_credit_info" />
+
+        <TextView
+            android:id="@+id/tv_loan_progress_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <com.dingzhu.junkd.mvp.ui.widget.XTextView
+        android:id="@+id/tv_loan_apply"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/btn_common_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="快速进件"
+        android:textColor="@color/jun_btn_text_color_selector"
+        android:textSize="16sp"
+        android:focusable="true" />
+
+</LinearLayout>

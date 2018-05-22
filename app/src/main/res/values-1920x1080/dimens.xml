@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+
+    <dimen name="pay_success_top">50dp</dimen>
+    <dimen name="pay_success_bottom">65dp</dimen>
+    <dimen name="text_size_60sp">60sp</dimen>
+    <dimen name="margintop_5dp">-5dp</dimen>
+    <dimen name="dimen_tikcet_foot">98dp</dimen>
+</resources>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.dingzhu.junkd.mvp.ui.widget.XTextView
+        android:id="@+id/tv_title"
+        style="@style/TextViewNotice"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="0dp"
+        android:text="房产信息"
+        android:drawableRight="@android:drawable/ic_menu_close_clear_cancel"
+        android:textColor="@color/tabPress" />
+
+    <LinearLayout style="@style/Edit">
+
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_width="wrap_content"
+            android:text="*"
+            android:textColor="@color/junkd_red_dark" />
+
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:text="房产所有人" />
+
+        <com.dingzhu.junkd.mvp.ui.widget.XEditText
+            android:id="@+id/et_loan_asset_real_estate_owner"
+            style="@style/EditContent"
+            android:hint="请输入房产所有人" />
+
+    </LinearLayout>
+
+    <View style="@style/Divider" />
+
+    <LinearLayout style="@style/Edit">
+
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_width="wrap_content"
+            android:text="*"
+            android:textColor="@color/junkd_red_dark" />
+
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:text="房产面积" />
+
+        <com.dingzhu.junkd.mvp.ui.widget.XEditText
+            android:id="@+id/et_loan_asset_real_estate_area"
+            style="@style/EditContent"
+            android:hint="请输入购买面积"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            style="@style/EditSpace"
+            android:text="m²" />
+    </LinearLayout>
+
+    <View style="@style/Divider" />
+
+
+    <View style="@style/Divider" />
+
+    <LinearLayout
+        android:id="@+id/ll_loan_asset_real_estate_address"
+        style="@style/Edit">
+
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_width="wrap_content"
+            android:text="*"
+            android:textColor="@color/junkd_red_dark" />
+
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_marginLeft="0dp"
+            android:text="房产地址" />
+
+        <com.dingzhu.junkd.mvp.ui.widget.XEditText
+            android:id="@+id/tv_loan_asset_real_estate_address"
+            style="@style/EditContent"
+            android:hint="请输入房产地址" />
+
+        <TextView style="@style/EditSpace" />
+    </LinearLayout>
+
+
+    <View style="@style/Divider" />
+
+    <LinearLayout style="@style/Edit">
+
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_width="wrap_content"
+            android:text="*"
+            android:textColor="@color/junkd_red_dark" />
+
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:text="房产抵押情况" />
+
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            android:id="@+id/et_loan_property_mortgage"
+            style="@style/EditContent.Optional"
+            android:hint="请选择房产抵押情况"/>
+
+    </LinearLayout>
+
+    <View style="@style/Divider" />
+
+    <LinearLayout
+        android:id="@+id/ll_mortgage_info"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <LinearLayout style="@style/Edit">
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:text="*"
+                android:textColor="@color/junkd_red_dark" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:text="抵押债权人" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_mortgaged_creditor"
+                style="@style/EditContent"
+                android:hint="请输入抵押债权人" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout style="@style/Edit">
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:text="*"
+                android:textColor="@color/junkd_red_dark" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:text="债权金额" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_mortgaged_amount"
+                style="@style/EditContent"
+                android:hint="请输入债权金额"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/EditSpace"
+                android:text="元" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+    </LinearLayout>
+
+
+</LinearLayout>

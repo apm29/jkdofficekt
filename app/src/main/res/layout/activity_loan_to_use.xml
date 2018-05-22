@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <TextView
+        android:background="@color/text_bg_color_light"
+        style="@style/TextViewNotice"
+        android:textColor="@color/text_color_tips_dark"
+        android:layout_margin="0dp"
+        android:padding="12dp"
+        android:text="@string/loan_to_use_notice" />
+
+    <LinearLayout
+        android:id="@+id/ll_loan_to_use_select"
+        style="@style/Edit">
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_width="wrap_content"
+            android:textColor="@color/junkd_red_dark"
+            android:text="*" />
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_marginLeft="0dp"
+            android:layout_width="wrap_content"
+            android:text="我的用途" />
+
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            android:id="@+id/tv_loan_to_use_model"
+            style="@style/EditContent.Optional"
+            android:layout_marginRight="16dp"
+            android:hint="请选择借款用途" />
+
+    </LinearLayout>
+
+    <View style="@style/Divider" />
+
+    <LinearLayout
+        android:id="@+id/ll_loan_to_use_other"
+        style="@style/Edit"
+        android:visibility="gone">
+
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:text="*其他用途" />
+
+        <com.dingzhu.junkd.mvp.ui.widget.XEditText
+            android:id="@+id/tv_loan_to_use_other"
+            style="@style/EditContent"
+            android:hint="请输入其他借款用途" />
+
+    </LinearLayout>
+
+    <View style="@style/Divider" />
+
+    <LinearLayout style="@style/Edit">
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_width="wrap_content"
+            android:textColor="@color/junkd_red_dark"
+            android:text="*" />
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            android:layout_marginLeft="0dp"
+            style="@style/EditTitle"
+            android:text="申请借款金额" />
+
+        <com.dingzhu.junkd.mvp.ui.widget.XEditText
+            android:id="@+id/et_loan_to_use_loan_amount"
+            style="@style/EditContent"
+            android:hint="请输入申请借款金额"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            style="@style/EditSpace"
+            android:text="元" />
+    </LinearLayout>
+
+    <View style="@style/Divider" />
+
+    <LinearLayout
+        android:id="@+id/ll_loan_to_use_apply_period"
+        style="@style/Edit">
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_width="wrap_content"
+            android:textColor="@color/junkd_red_dark"
+            android:text="*" />
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_marginLeft="0dp"
+            android:layout_width="wrap_content"
+            android:text="申请期限" />
+
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            android:id="@+id/tv_loan_to_use_apply_period"
+            style="@style/EditContent.Optional"
+            android:hint="请选择申请期限" />
+        <TextView
+            style="@style/EditSpace"
+            android:text="月" />
+
+
+    </LinearLayout>
+
+    <View style="@style/Divider" />
+
+    <LinearLayout
+        android:id="@+id/ll_loan_to_use_apply_other_period"
+        style="@style/Edit"
+        tools:visibility="visible"
+        android:visibility="gone">
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_width="wrap_content"
+            android:textColor="@color/junkd_red_dark"
+            android:text="*" />
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            style="@style/EditTitle"
+            android:layout_marginLeft="0dp"
+            android:text="其他期限" />
+
+        <com.dingzhu.junkd.mvp.ui.widget.XEditText
+            android:id="@+id/et_loan_to_use_apply_other_period"
+            style="@style/EditContent"
+            android:hint="请输入其他借款期限"
+            android:inputType="number" />
+
+        <TextView
+            style="@style/EditSpace"
+            android:text="月" />
+    </LinearLayout>
+
+    <com.dingzhu.junkd.mvp.ui.widget.XTextView
+        android:id="@+id/tv_loan_to_use_info_save"
+        style="@style/XTextViewBtn"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:textColor="@color/jun_btn_text_color_selector"
+        android:text="保存" />
+
+    <com.dingzhu.junkd.mvp.ui.widget.XTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center|left"
+        android:text="说明："
+        android:textColor="@color/junkd_red_dark"
+        android:textSize="@dimen/text_size_12sp" />
+
+    <com.dingzhu.junkd.mvp.ui.widget.XTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center|left"
+        android:text="借款不得用于以下目的和用途："
+        android:textSize="@dimen/text_size_12sp" />
+
+    <com.dingzhu.junkd.mvp.ui.widget.XTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center|left"
+        android:text="@string/loan_to_use_notice_2"
+        android:textSize="@dimen/text_size_12sp" />
+</LinearLayout>

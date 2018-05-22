@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFF4"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout style="@style/Edit">
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:text="*"
+                android:textColor="@color/junkd_red_dark" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="工作单位" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_job_info_work_company"
+                style="@style/EditContent"
+                tools:text="@string/app_name"
+                android:hint="请输入工作单位" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout style="@style/Edit">
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:text="*"
+                android:textColor="@color/junkd_red_dark" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="部门" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_job_info_work_department"
+                style="@style/EditContent"
+                android:hint="请输入部门" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout style="@style/Edit">
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:text="*"
+                android:textColor="@color/junkd_red_dark" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="职位" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_job_info_work_rank"
+                style="@style/EditContent"
+                android:hint="请输入职位" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout
+            style="@style/Edit"
+            android:visibility="gone">
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:text="*所属行业" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_job_info_industry"
+                style="@style/EditContent"
+                android:hint="请输入所属行业" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/Divider"
+            android:visibility="gone" />
+
+        <LinearLayout
+            style="@style/Edit"
+            android:visibility="gone">
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:text="*职位级别" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_job_info_position_level"
+                style="@style/EditContent"
+                android:hint="请输入职位级别" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/Divider"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_loan_job_info_company_nature_select"
+            style="@style/Edit"
+            android:visibility="gone">
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:text="*单位性质" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                android:id="@+id/tv_loan_job_info_company_nature"
+                style="@style/EditContent.Optional"
+                android:hint="请选择单位性质" />
+
+            <TextView style="@style/EditSpace" />
+        </LinearLayout>
+
+
+        <View
+            style="@style/Divider"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_loan_job_info_start_work_time_select"
+            style="@style/Edit">
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:text="*"
+                android:textColor="@color/junkd_red_dark" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="入职时间" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                android:id="@+id/tv_loan_job_info_start_work_time"
+                style="@style/EditContent.Optional"
+                android:hint="请选择入职时间" />
+
+            <TextView style="@style/EditSpace" />
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+
+        <TextView
+            style="@style/TextViewNotice"
+            android:text="单位地址信息" />
+
+        <LinearLayout
+            android:id="@+id/ll_loan_job_info_company_address_select"
+            style="@style/Edit"
+            android:visibility="gone">
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:text="*所在地市" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                android:id="@+id/tv_loan_job_info_company_address"
+                style="@style/EditContent.Optional"
+                android:hint="请选择省市区（县）" />
+
+            <TextView style="@style/EditSpace" />
+        </LinearLayout>
+
+
+        <View style="@style/Divider" />
+
+        <LinearLayout style="@style/Edit">
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:text="*"
+                android:textColor="@color/junkd_red_dark" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="详细地址" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_job_info_company_detail_address"
+                style="@style/EditContent"
+                android:hint="街道，门牌号等" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout style="@style/Edit">
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:text="*"
+                android:textColor="@color/junkd_red_dark" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="邮政编码" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_job_info_post_code"
+                style="@style/EditContent"
+                android:hint="请输入邮政编码"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout style="@style/Edit">
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:text="*"
+                android:textColor="@color/junkd_red_dark" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="单位电话" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_job_info_company_area_code"
+                style="@style/EditContent"
+                android:hint="请输入区号+座机"
+                android:inputType="number" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:text="（区号）"
+                android:visibility="gone" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_job_info_company_phone_number"
+                style="@style/EditContent"
+                android:layout_weight="2"
+                android:inputType="phone"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout style="@style/Edit">
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:text="*"
+                android:textColor="@color/junkd_red_dark" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="每月基本薪资" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_job_info_basic_monthly_salary"
+                style="@style/EditContent"
+                android:hint="请输入每月基本薪资"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                style="@style/EditSpace"
+                android:text="元" />
+        </LinearLayout>
+
+
+        <View style="@style/Divider" />
+
+        <LinearLayout style="@style/Edit">
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:text="*"
+                android:textColor="@color/junkd_red_dark" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="每月发薪日" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_job_info_monthly_payday"
+                style="@style/EditContent"
+                android:hint="请输入每月发薪日"
+                android:inputType="number" />
+
+            <TextView
+                style="@style/EditSpace"
+                android:text="日" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/Divider"
+            android:visibility="gone" />
+
+        <LinearLayout
+            style="@style/Edit"
+            android:visibility="gone">
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:text="*其他收入" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_job_info_other_income"
+                style="@style/EditContent"
+                android:hint="请输入其他收入"
+                android:inputType="numberDecimal"
+                android:textColor="@color/junkd_red_dark" />
+
+            <TextView
+                style="@style/EditSpace"
+                android:text="元/月" />
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout
+            android:id="@+id/ll_loan_job_info_salary_pay_way_select"
+            style="@style/Edit">
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:text="*"
+                android:textColor="@color/junkd_red_dark" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="发薪方式" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                android:id="@+id/tv_loan_job_info_salary_pay_way_model"
+                style="@style/EditContent.Optional"
+                android:hint="请选择发薪方式" />
+
+            <TextView style="@style/EditSpace" />
+        </LinearLayout>
+
+        <View
+            style="@style/Divider"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/ll_loan_job_pay_bank"
+            style="@style/Edit">
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:text="*"
+                android:textColor="@color/junkd_red_dark" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="发薪银行" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_job_info_pay_bank"
+                style="@style/EditContent"
+                android:hint="请输入发薪银行" />
+
+
+        </LinearLayout>
+
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            android:id="@+id/tv_loan_job_info_save"
+            style="@style/XTextViewBtn"
+            android:text="保存" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

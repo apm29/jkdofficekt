@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="120dp"
+    android:id="@+id/rl_add"
+    android:background="@drawable/icon_add"
+    android:layout_height="120dp">
+    <ImageView
+        android:id="@+id/iv_image"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_margin="1px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:id="@+id/ll_loading"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.dingzhu.junkd.mvp.ui.widget.ProgressBarWithText
+            android:id="@+id/progress_int"
+            android:layout_width="70dp"
+            app:progressMainColor="@color/white"
+            app:progressInt="50"
+            app:withText="false"
+            app:progressSecondaryColor="@color/black_dark"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="正在上传"
+            android:id="@+id/tv_uploading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:id="@+id/ll_status"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_status"
+            android:src="@mipmap/success"
+            android:layout_width="21dp"
+            android:layout_height="21dp" />
+        <TextView
+            android:id="@+id/tv_status"
+            android:text="上传成功"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

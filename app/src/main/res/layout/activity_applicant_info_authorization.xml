@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_unfocused_bg">
+    <LinearLayout
+        android:layout_gravity="center"
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="6dp"
+        android:background="@color/white"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        xmlns:tools="http://schemas.android.com/tools"
+        >
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            android:text="进件客户验证"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+        <LinearLayout style="@style/Edit">
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:text="*用户姓名" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_name"
+                style="@style/EditContent"
+                android:maxLength="6"
+                android:hint="请输入姓名" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout style="@style/Edit">
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:text="*用户身份证号" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_id_card_num"
+                android:digits="1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+                android:maxLength="18"
+                style="@style/EditContent"
+                android:hint="请输入身份证号" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                android:id="@+id/btn_cancel"
+                android:text="取消"
+                android:textColor="@color/jun_golden"
+                android:layout_margin="12dp"
+                android:gravity="center"
+                android:layout_gravity="left"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <android.support.v4.widget.Space
+                android:layout_weight="1"
+                android:layout_width="@dimen/layout_margin_0dp"
+                android:layout_height="0dp" />
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                android:text="确定"
+                android:id="@+id/btn_verify"
+                android:textColor="@color/jun_golden"
+                android:layout_margin="12dp"
+                android:gravity="center"
+                android:layout_gravity="right"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

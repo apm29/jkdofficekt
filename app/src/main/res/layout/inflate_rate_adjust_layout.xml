@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            android:text="当前(默认)手续费"
+            style="@style/EditTitle" />
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            android:id="@+id/tv_current_rate"
+            android:text="3%"
+            android:layout_marginLeft="22dp"
+            android:textColor="@color/junkd_red_dark"
+            style="@style/EditSpace"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            android:text="上调利率"
+            style="@style/EditTitle" />
+        <com.dingzhu.junkd.mvp.ui.widget.XEditText
+            android:id="@+id/et_rate_raise"
+            android:hint="最大上调利率3%"
+            android:layout_marginLeft="22dp"
+            android:textColor="@color/junkd_red_dark"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:maxLength="4"
+            style="@style/EditContent"/>
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            android:text="%"
+            style="@style/EditSpace"/>
+    </LinearLayout>
+</LinearLayout>

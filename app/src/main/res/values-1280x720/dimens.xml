@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+
+    <dimen name="pay_success_top">50dp</dimen>
+    <dimen name="pay_success_bottom">65dp</dimen>
+    <dimen name="text_size_60sp">65sp</dimen>
+    <dimen name="margintop_5dp">-3dp</dimen>
+    <dimen name="dimen_cal_40">40dp</dimen>
+    <dimen name="dimen_cal_38">38dp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_10">10sp</dimen>
+    <dimen name="dimen_tikcet_foot">80dp</dimen>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="loan_to_use">
+        <item>日常生活消费</item>
+        <item>提高生活质量</item>
+        <item>购物</item>
+        <item>医疗</item>
+        <item>教育支出</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="loan_period">
+        <item>6个月</item>
+        <item>12个月</item>
+        <item>24个月</item>
+        <item>36个月</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="loan_personal_info_education">
+        <item>博士</item>
+        <item>本科</item>
+        <item>大专</item>
+        <item>中专</item>
+        <item>高中</item>
+        <item>初中</item>
+        <item>无</item>
+    </string-array>
+    <string-array name="loan_personal_info_marital_status">
+        <item>未婚</item>
+        <item>已婚</item>
+        <item>丧偶</item>
+        <item>离异</item>
+    </string-array>
+    <string-array name="loan_select_yes_or_no">
+        <item>是</item>
+        <item>否</item>
+    </string-array>
+    <string-array name="loan_unit_nature">
+        <item>机关单位</item>
+        <item>国有股份</item>
+        <item>外资</item>
+        <item>合资</item>
+        <item>民营</item>
+        <item>私营</item>
+        <item>个体</item>
+        <item>社会团体</item>
+    </string-array>
+    <string-array name="loan_salary_pay_way">
+        <item>网银</item>
+        <item>现金</item>
+    </string-array>
+    <string-array name="loan_post_address">
+        <item>单位地址</item>
+        <item>住宅地址</item>
+    </string-array>
+</resources>

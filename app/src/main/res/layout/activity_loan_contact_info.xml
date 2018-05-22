@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFF4"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".mvp.ui.activity.info.LoanContactInfoActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_contact_info_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_marriage_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/TextViewNotice"
+                android:text="*配偶信息" />
+
+            <LinearLayout style="@style/Edit">
+
+                <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                    style="@style/EditTitle"
+                    android:text="*姓名" />
+
+                <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                    android:id="@+id/et_loan_contact_info_spouse_name"
+                    style="@style/EditContent"
+                    android:hint="请输入姓名" />
+
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout style="@style/Edit">
+
+                <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                    style="@style/EditTitle"
+                    android:text="*电话" />
+
+                <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                    android:id="@+id/et_loan_contact_info_spouse_phone_number"
+                    style="@style/EditContent"
+                    android:hint="请输入手机号码"
+                    android:inputType="phone"
+                    android:maxLength="11" />
+
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout style="@style/Edit">
+
+                <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                    style="@style/EditTitle"
+                    android:text="*工作单位" />
+
+                <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                    android:id="@+id/et_loan_contact_info_spouse_work_company"
+                    style="@style/EditContent"
+                    android:hint="请输入工作单位" />
+
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+        </LinearLayout>
+        <TextView
+            android:layout_height="40dp"
+            android:textColor="@color/text_color_sub_title"
+            style="@style/TextViewNotice"
+            android:text="直属亲属信息" />
+
+        <LinearLayout style="@style/Edit">
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:textColor="@color/junkd_red_dark"
+                android:text="*" />
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="姓名" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_contact_info_directly_relative_name1"
+                style="@style/EditContent"
+                android:hint="请输入姓名" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+        <LinearLayout style="@style/Edit">
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:textColor="@color/junkd_red_dark"
+                android:text="*" />
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="关系" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_contact_info_directly_relative_model1"
+                style="@style/EditContent"
+                android:hint="请输入直属亲属关系" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout style="@style/Edit">
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:textColor="@color/junkd_red_dark"
+                android:text="*" />
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="电话" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_contact_info_directly_relative_phone_number1"
+                style="@style/EditContent"
+                android:hint="请输入手机号码"
+                android:inputType="phone"
+                android:maxLength="11" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout style="@style/Edit">
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:textColor="@color/junkd_red_dark"
+                android:text="*" />
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="工作单位" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_contact_info_directly_relative_work_company1"
+                style="@style/EditContent"
+                android:hint="请输入工作单位" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+        <TextView
+            style="@style/TextViewNotice"
+
+            android:text="直属亲属信息" />
+
+        <LinearLayout style="@style/Edit">
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:textColor="@color/junkd_red_dark"
+                android:text="*" />
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="姓名" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_contact_info_directly_relative_name"
+                style="@style/EditContent"
+                android:hint="请输入姓名" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+
+        <LinearLayout style="@style/Edit">
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:textColor="@color/junkd_red_dark"
+                android:text="*" />
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="关系" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_contact_info_directly_relative_model"
+                style="@style/EditContent"
+                android:hint="请输入直属亲属关系" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout style="@style/Edit">
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:textColor="@color/junkd_red_dark"
+                android:text="*" />
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="电话" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_contact_info_directly_relative_phone_number"
+                style="@style/EditContent"
+                android:hint="请输入手机号码"
+                android:inputType="phone"
+                android:maxLength="11" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout style="@style/Edit">
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:textColor="@color/junkd_red_dark"
+                android:text="*" />
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="工作单位" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_contact_info_directly_relative_work_company"
+                style="@style/EditContent"
+                android:hint="请输入工作单位" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <TextView
+            style="@style/TextViewNotice"
+            android:text="同事信息" />
+
+        <LinearLayout style="@style/Edit">
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:textColor="@color/junkd_red_dark"
+                android:text="*" />
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="姓名" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_contact_info_colleague_name"
+                style="@style/EditContent"
+                android:hint="请输入姓名" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout style="@style/Edit">
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:textColor="@color/junkd_red_dark"
+                android:text="*" />
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="电话" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_contact_info_colleague_phone_number"
+                style="@style/EditContent"
+                android:hint="请输入手机号码"
+                android:inputType="phone"
+                android:maxLength="11" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout style="@style/Edit">
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:textColor="@color/junkd_red_dark"
+                android:text="*" />
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="工作单位" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_contact_info_colleague_work_company"
+                style="@style/EditContent"
+                android:hint="请输入工作单位" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <TextView
+            style="@style/TextViewNotice"
+            android:text="朋友信息"
+             />
+
+        <LinearLayout
+            style="@style/Edit"
+            >
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:textColor="@color/junkd_red_dark"
+                android:text="*" />
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="姓名" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_contact_info_friend_name"
+                style="@style/EditContent"
+                android:hint="请输入姓名" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/Divider"
+             />
+
+        <LinearLayout
+            style="@style/Edit"
+            >
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:textColor="@color/junkd_red_dark"
+                android:text="*" />
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="电话" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_contact_info_friend_phone_number"
+                style="@style/EditContent"
+                android:hint="请输入手机号码"
+                android:inputType="phone"
+                android:maxLength="11" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/Divider"
+             />
+
+        <LinearLayout
+            style="@style/Edit"
+            >
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:textColor="@color/junkd_red_dark"
+                android:text="*" />
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="工作单位" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XEditText
+                android:id="@+id/et_loan_contact_info_friend_work_company"
+                style="@style/EditContent"
+                android:hint="请输入工作单位" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="26dp"
+            android:id="@+id/ll_loan_contact_info_is_family_know"
+            style="@style/Edit">
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:textColor="@color/junkd_red_dark"
+                android:text="*" />
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="家人是否知晓此项贷款" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                android:id="@+id/tv_loan_contact_info_is_family_know"
+                style="@style/EditContent.Optional"
+                android:hint="请选择" />
+
+            <TextView style="@style/EditSpace" />
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout
+            android:id="@+id/ll_loan_contact_info_post_address_select"
+            style="@style/Edit">
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_width="wrap_content"
+                android:textColor="@color/junkd_red_dark"
+                android:text="*" />
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                style="@style/EditTitle"
+                android:layout_marginLeft="0dp"
+                android:text="邮寄地址" />
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                android:id="@+id/tv_loan_contact_info_post_address"
+                style="@style/EditContent.Optional"
+                android:text="住宅地址"
+                android:hint="请选择邮寄地址" />
+
+            <TextView style="@style/EditSpace" />
+        </LinearLayout>
+
+        <com.dingzhu.junkd.mvp.ui.widget.XTextView
+            android:id="@+id/tv_loan_contact_info_save"
+            style="@style/XTextViewBtn"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:textColor="@color/jun_btn_text_color_selector"
+            android:text="保存" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

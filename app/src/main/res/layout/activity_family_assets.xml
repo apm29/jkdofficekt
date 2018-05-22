@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v4.widget.NestedScrollView android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                style="@style/TextViewNotice"
+                android:text="房产信息"
+                android:layout_margin="@dimen/layout_margin_16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <android.support.v7.widget.RecyclerView
+                android:nestedScrollingEnabled="false"
+                android:id="@+id/recycler_view_house"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                style="@style/TextViewNotice"
+                android:text="车辆信息"
+                android:layout_margin="@dimen/layout_margin_16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <android.support.v7.widget.RecyclerView
+                android:nestedScrollingEnabled="false"
+                android:id="@+id/recycler_view_vehicle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+
+            <com.dingzhu.junkd.mvp.ui.widget.XTextView
+                android:id="@+id/tv_loan_family_assets_commit"
+                android:layout_marginLeft="65dp"
+                android:layout_marginRight="65dp"
+                style="@style/XTextViewBtn"
+                android:text="保存" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>
