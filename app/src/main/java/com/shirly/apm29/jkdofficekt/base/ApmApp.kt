@@ -18,5 +18,13 @@ class ApmApp : Application() {
                 .build()
                 .inject(this)
         registerActivityLifecycleCallbacks(appManager)
+        instance = this
+    }
+    companion object {
+        @JvmStatic
+        lateinit var instance:ApmApp
+        fun getApplication():ApmApp{
+            return instance
+        }
     }
 }

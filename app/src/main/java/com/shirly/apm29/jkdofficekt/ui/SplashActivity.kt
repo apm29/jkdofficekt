@@ -1,11 +1,15 @@
 package com.shirly.apm29.jkdofficekt.ui
 
+import android.arch.lifecycle.ViewModelProvider
+import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
-import android.widget.Toast
 import com.example.dingzhu.zuoplus.model.Api
+import com.shirly.apm29.jkdofficekt.model.bean.Category
+import com.example.dingzhu.zuoplus.model.bean.CategoryListItem
+import com.shirly.apm29.jkdofficekt.model.viewmodel.MainViewModel
 import com.example.dingzhu.zuoplus.utils.Rxs
 import com.shirly.apm29.jkdofficekt.R
 import com.shirly.apm29.jkdofficekt.di.component.DaggerBaseComponent
@@ -33,18 +37,36 @@ class SplashActivity : AppCompatActivity() {
                 .profile()
                 .compose(Rxs.threadsRx())
                 .subscribe(
-                        {intoTheDead()}, { toLogin() }
+                        {
+                            if (it.isSuccess()) {
+                                intoTheDead()
+                            } else {
+                                toLogin()
+                            }
+
+                        }, { toLogin() }
                 )
-        val sum = fun Int.(other:Int) = this+other
+        val modelProvider = ViewModelProviders.of(this, ViewModelProvider.AndroidViewModelFactory.getInstance(application))
+        val mainViewModel = modelProvider.get("Main", MainViewModel::class.java)
+        mainViewModel.setDataValue(
+                Category(
+                        categoryList = listOf(
+                                CategoryListItem("红色", "哈哈", 3)
+                        )
+                )
+        )
+        mainViewModel.key.value = "ASDFGHJKL"
     }
 
     private fun toLogin() {
-        Toast.makeText(this,"login",Toast.LENGTH_SHORT).show()
+        handler.postDelayed({
+            startActivity(Intent(this, MainActivity::class.java))
+        }, 1000)
     }
 
     private fun intoTheDead() {
         handler.postDelayed({
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         }, 1000)
     }
 }

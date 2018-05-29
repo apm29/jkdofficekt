@@ -1,13 +1,15 @@
 package com.shirly.apm29.jkdofficekt.ui
 
+import android.arch.lifecycle.ViewModelProvider
+import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.content.res.Configuration
 import android.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.annotation.MainThread
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
+import com.shirly.apm29.jkdofficekt.model.viewmodel.MainViewModel
 import com.google.gson.Gson
 import com.shirly.apm29.jkdofficekt.R
 import com.shirly.apm29.jkdofficekt.databinding.ActivityApplicantInfoBinding
@@ -81,6 +83,12 @@ class MainActivity : AppCompatActivity() {
             println("after:${applicantInfoBinding.bean}")
             startActivity(Intent(this, NewPage::class.java))
         }
+
+        val modelProvider = ViewModelProviders.of(this, ViewModelProvider.AndroidViewModelFactory.getInstance(this.application))
+        val mainViewModel = modelProvider.get("Main", MainViewModel::class.java)
+        val category = mainViewModel.getDataValue()
+        println("category = $category")
+        println(mainViewModel.key.value)
     }
 
     override fun onConfigurationChanged(newConfig: Configuration?) {

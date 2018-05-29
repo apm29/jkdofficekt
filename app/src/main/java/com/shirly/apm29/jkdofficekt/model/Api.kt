@@ -1,18 +1,14 @@
 package com.example.dingzhu.zuoplus.model
 
 import com.example.dingzhu.zuoplus.model.bean.Bean
-import com.example.dingzhu.zuoplus.model.bean.Category
+import com.shirly.apm29.jkdofficekt.model.bean.Category
 import com.example.dingzhu.zuoplus.model.bean.CategoryContent
 import com.example.dingzhu.zuoplus.model.bean.ContentDetail
 import com.shirly.apm29.jkdofficekt.model.bean.InitData
 import io.reactivex.Observable
-import retrofit2.http.Field
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface Api {
-
 
     @GET(" /clt/jsp/v2/getCategorys.jsp")
     fun fetchData(): Observable<Category>
@@ -25,4 +21,8 @@ interface Api {
 
     @POST("/v1/user/profile")
     fun profile(): Observable<Bean<InitData>>
+
+    @FormUrlEncoded
+    @POST(value = "/user/login")
+    fun login(@Field("username")username: String,@Field("pwd") pwd: String): Observable<Bean<String>>
 }

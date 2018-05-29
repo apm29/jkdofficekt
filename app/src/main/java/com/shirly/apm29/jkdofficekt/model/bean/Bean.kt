@@ -15,9 +15,13 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class Bean<out T>(@SerializedName("msg")
-                    val msg: String = "",
-                           @SerializedName("code")
-                    val code: Int = 0,
-                           @SerializedName("data")
-                    val data: T?)
+                       val msg: String = "",
+                       @SerializedName("code")
+                       val code: Int = 0,
+                       @SerializedName("data")
+                       val data: T?) {
+    fun isSuccess(): Boolean {
+        return code == 200
+    }
+}
 
