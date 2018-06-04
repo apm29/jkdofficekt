@@ -47,11 +47,11 @@ class BaseModule(val app: Application) {
     @Singleton
     fun provideOkHttpClient(): OkHttpClient {
         val loggingInterceptor = HttpLoggingInterceptor {
-            Log.d("ZPlus-http", it)
+            Log.w("ZPlus-http", it)
         }
         loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
         return OkHttpClient.Builder()
-                .addInterceptor(loggingInterceptor)
+
                 .addInterceptor {
                     val originRequest = it.request()
                     var request: Request = originRequest
@@ -94,6 +94,7 @@ class BaseModule(val app: Application) {
 
                     return@addInterceptor it.proceed(request)
                 }
+                .addInterceptor(loggingInterceptor)
                 .build()
     }
 

@@ -10,6 +10,20 @@ import org.junit.Assert.*
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 class ExampleUnitTest {
+
+    @Test
+    fun test1(): Unit {
+        for (i in 1..40){
+            println("第${i}年：${getInterest(i)}")
+        }
+    }
+
+    private fun getInterest(year: Int):Double {
+        return if (year == 1) 14000L*1.2
+        else
+            (getInterest(year-1)+14000)*1.2
+    }
+
     @Test
     fun main() {
         // a）
@@ -139,5 +153,6 @@ class A1: A() {
     override fun E1.f() {
         println("E1.f in A1")
     }
+
 }
 

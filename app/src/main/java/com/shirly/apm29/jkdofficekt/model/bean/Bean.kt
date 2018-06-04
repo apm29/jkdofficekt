@@ -1,4 +1,4 @@
-package com.example.dingzhu.zuoplus.model.bean
+package com.shirly.apm29.jkdofficekt.model.bean
 
 import com.google.gson.annotations.SerializedName
 

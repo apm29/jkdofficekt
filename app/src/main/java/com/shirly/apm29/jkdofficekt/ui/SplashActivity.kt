@@ -60,13 +60,15 @@ class SplashActivity : AppCompatActivity() {
 
     private fun toLogin() {
         handler.postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
         }, 1000)
     }
 
     private fun intoTheDead() {
         handler.postDelayed({
             startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }, 1000)
     }
 }

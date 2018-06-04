@@ -1,5 +1,7 @@
 package com.example.dingzhu.zuoplus.model.bean
 
+import com.shirly.apm29.jkdofficekt.model.bean.AreaListItem
+
 data class VideosItem(val duration: String = "",
                       val fileSize: String = "",
                       val format: String = "",
